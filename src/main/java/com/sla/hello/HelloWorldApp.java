@@ -37,7 +37,6 @@ public class HelloWorldApp extends SpringBootServletInitializer {
 
         ServletContextTemplateResolver resolver = new ServletContextTemplateResolver();
 
-        System.out.println("blah!**************************************************");
         resolver.setPrefix("/resources/templates/");
         resolver.setSuffix(".html");
         resolver.setTemplateMode("HTML5");
