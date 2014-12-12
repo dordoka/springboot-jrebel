@@ -23,36 +23,9 @@ public class HelloCtrl {
 
         model.addAttribute("name", name);
 
-        CustomerRepo repo = ctx.getBean(CustomerRepo.class);
-
-
-        repo.save(new Customer("Jack", "Blu"));
-        repo.save(new Customer("Chloe", "Blau"));
-        repo.save(new Customer("Aliron", "tximpon"));
-        repo.save(new Customer("David", "Palmer"));
-        repo.save(new Customer("Michelle", "Dressler"));
-
-        System.out.println("testing");
-        Iterable<Customer> customers = repo.findAll();
-        System.out.println("Customer List");
-
-
-        for (Customer customer : customers) {
-            System.out.println(customer);
-        }
-
-        StreamSupport.stream(customers.spliterator(), false)
-                .forEach(System.out::println);
-
-        repo.findByFirstName("Michelle")
-                .stream()
-                .forEach(System.out::println);
-
         System.out.println(new Date().toString());
         System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("============================");
-        System.out.println("asdfasdfasdfasf");
+
 
 
         return "hi";
